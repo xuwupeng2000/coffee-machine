@@ -1,24 +1,17 @@
 ## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Just to try find out the idea of nomalizing JSON from ORDS 
+and use a typcial resources ORM to handle data receiving and submitting 
 
-Things you may want to cover:
+How to run it
 
-* Ruby version
+```
+bundle install
+rails console
+```
 
-* System dependencies
+in the console do 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+Order.all.to_a
+```
