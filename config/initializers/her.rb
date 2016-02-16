@@ -4,9 +4,11 @@ Her::API.setup url: BASE_URL do |c|
   # Request
   c.use Faraday::Request::UrlEncoded
 
+  # Other
+  c.use Faraday::Response::Logger, Rails.logger
+
   # Response
   c.use OrdsJsonParser
-  # c.use Her::Middleware::DefaultParseJSON
 
   # Adapter
   c.use Faraday::Adapter::NetHttp
